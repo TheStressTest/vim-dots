@@ -8,5 +8,3 @@ keymap("", "<Up>", "<Nop>", default_opts)
 keymap("", "<Down>", "<Nop>", default_opts)
 keymap("", "<Left>", "<Nop>", default_opts)
 keymap("", "<Right>", "<Nop>", default_opts)
-
-
