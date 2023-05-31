@@ -4,7 +4,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright', 'tsserver' }
+local servers = { 'pyright', 'tsserver', 'rust_analyzer', 'svelte', 'clangd', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -64,9 +64,16 @@ cmp.setup {
   },
 }
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " } 
+local signs = { Error = "", Warn = "", Hint = "", Info = "" } 
 for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
 end
+
+
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+})
 

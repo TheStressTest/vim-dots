@@ -9,7 +9,8 @@ require("gruvbox").setup({
         TSNote = {link = "GruvboxYellow"},
         TSConstBuiltin = {link = "GruvboxPurple"},
         ContextVt = {fg = "#878787"},
-        Comment = {fg = "#fe8019", italic = true},
+        -- Comment = {fg = "#fe8019", italic = true},
+	Comment = {fg = "#3b3b3b", italic = true},
         Folded = {italic = true, fg = "#fe8019", bg = "#3c3836"},
         FoldColumn = {fg = "#fe8019", bg = "#0E1018"},
         DiffAdd = {bold = true, reverse = false, fg = "", bg = "#2a4333"},
@@ -36,7 +37,7 @@ require("gruvbox").setup({
 })
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "python" },
+  ensure_installed = { "python", "go", },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

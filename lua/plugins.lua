@@ -1,12 +1,19 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'ellisonleao/gruvbox.nvim'
+	use "rebelot/kanagawa.nvim"
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin
 	use 'williamboman/mason.nvim'
+	use 'lervag/vimtex'
+	use "lukas-reineke/indent-blankline.nvim"
+	use {
+		"folke/trouble.nvim",
+  		requires = "nvim-tree/nvim-web-devicons",
+	}
 	use {
 		"kylechui/nvim-surround",
 		config = function() require("nvim-surround").setup({}) end
